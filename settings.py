@@ -1,8 +1,6 @@
 #coding=utf-8
 import web
 
-Scrap_DIR = "static/scraps/"
-
 web.config.debug = False
 web.config.session_parameters['timeout'] = 60 * 10
 web.config.session_parameters['ignore_change_ip'] = False
