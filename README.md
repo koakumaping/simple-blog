@@ -7,3 +7,4 @@ A simple blog base on web.py.
 4.访问127.0.0.1:8080  
 
 ##  支持Markdown文件上传，程序会自动存储至数据库中。
+###后台的email跟password可以在程序中找到
