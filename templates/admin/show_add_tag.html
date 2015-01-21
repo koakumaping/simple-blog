@@ -1,0 +1,20 @@
+{% extends "admin/base.html" %}
+{% block content %}
+</br>
+      <form method="post" class="form-horizontal" enctype="multipart/form-data" action="add_tag">
+            <div class="form-group">
+            <label class="col-sm-2 control-label">Tag</label>
+            <div class="col-sm-2">
+            <input type="text" class="form-control" name="tag" placeholder="Tag input"/>
+            </div>
+            </div>
+      
+            <div class="col-sm-offset-3">
+            <div class="form-group">
+            <div>
+            <button type="submit" class="btn">Add</button>
+            </div>
+            </div>
+            </div>
+      </form>
+{% endblock %}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<title>Webpy Admin</title>
+</head>
+
+<body>
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right" role="tablist">
+		
+        {% if active == 1 %}
+			<li role="presentation" class="active">
+		{% else %}
+			<li role="presentation">
+		{% endif %}
+			<a href="/admin">Home</a></li>
+		
+		{% if active == 2 %}
+			<li role="presentation" class="active">
+		{% else %}
+			<li role="presentation">
+		{% endif %}
+			<a href="/add_scrap">添加文章</a></li>
+			
+        {% if active == 3 %}
+			<li role="presentation" class="active">
+		{% else %}
+			<li role="presentation">
+		{% endif %}
+			<a href="/del_scrap">删除文章</a></li>
+			
+        {% if active == 4 %}
+			<li role="presentation" class="active">
+		{% else %}
+			<li role="presentation">
+		{% endif %}
+			<a href="/add_tag">添加Tag</a></li> 
+        </ul>
+		
+      <h3 class="text-muted">Webpy admin</h3>
+      </div> 
+      {% block content %}
+      {% endblock content %}
+<br>
+<div class="footer">
+<p>&copy; Company 2015</p>
+</div>
+
+</div> <!-- /container -->
+    
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

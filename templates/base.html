@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<title>Webpy Blog</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<div class="row-fluid">
+		<div class="span12">
+		<nav class="nav nav-tabs role="navigation">
+		{% if active == 1 %}
+			<li role="presentation" class="active">
+		{% else %}
+			 <li role="presentation">
+		{% endif %}
+				<a href="/">主页</a>
+			</li>
+		{% if active == 2 %}
+			<li role="presentation" class="active">
+		{% else %}
+			<li role="presentation" >
+		{% endif %}
+				<a href="/blog/1">博客</a>
+			</li>
+				
+		<li class="dropdown pull-right">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">更多<strong class="caret"></strong></a>
+			<ul class="dropdown-menu">
+			<li>
+			<a href="/admin">后台管理</a>
+			</li>
+			</ul>
+		</li>
+			</nav>
+		</div>
+	</div>
+	{% block content %}
+	{% endblock content %}
+</div>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+<!--
+<form method="post" action="add">
+<p><input type="text" name="title" /> <input type="submit" value="Add" /></p>
+</form>
+
+<form method="post" action="del">
+<p><input type="text" name="title" /> <input type="submit" value="Del" /></p>
+</form>
+-->
